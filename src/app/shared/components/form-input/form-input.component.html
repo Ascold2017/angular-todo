@@ -1,0 +1,6 @@
+
+<figure class="form-input">
+  <label class="form-input__label">{{ label }}</label>
+  <input class="form-input__input" [formControl]="control">
+  <span *ngIf="errors.length" class="form-input__error">{{ errors }}</span>
+</figure>

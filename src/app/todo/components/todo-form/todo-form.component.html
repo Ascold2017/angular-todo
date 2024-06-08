@@ -1,0 +1,8 @@
+<form [formGroup]="todoForm" class="todo-form" (ngSubmit)="onSubmit()" (reset)="onReset()">
+
+  <app-form-input label="Title" [control]="todoForm.controls.title" />
+  <app-form-input label="Content" [control]="todoForm.controls.content"/>
+
+  <button type="submit">{{ initialTodo ? 'Save' : 'Create' }}</button>
+  <button type="reset">Reset</button>
+</form>

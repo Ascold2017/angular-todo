@@ -1,0 +1,17 @@
+<article class="todo-item card">
+
+  <ng-template [ngIf]="!isEdit">
+    <header class="todo-item__header">
+      <h3>{{ todo.title }}</h3>
+      <div class="todo-item__actions">
+        <button (click)="isEdit = true;">Edit</button>
+        <button (click)="todoService.deleteTodo(todo.id)">Delete</button>
+      </div>
+    </header>
+    <div [innerHtml]="todo.content"></div>
+    <time>{{ todo.createdAt | date:'medium' }}</time>
+
+  </ng-template>
+
+  <app-todo-form *ngIf="isEdit" [initialTodo]="todo" (submitEvent)="isEdit = false"></app-todo-form>
+</article>
