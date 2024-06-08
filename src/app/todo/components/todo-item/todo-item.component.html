@@ -8,7 +8,7 @@
         <button (click)="todoService.deleteTodo(todo.id)">Delete</button>
       </div>
     </header>
-    <div [innerHtml]="todo.content"></div>
+    <div class="todo-item__content" [innerHtml]="todo.content"></div>
     <time>{{ todo.createdAt | date:'medium' }}</time>
 
   </ng-template>

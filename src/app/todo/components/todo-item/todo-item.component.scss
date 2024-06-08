@@ -3,6 +3,9 @@
 
   h3 {
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
   }
 
   &__header {
@@ -12,5 +15,9 @@
 
   &__actions {
     display: flex;
+  }
+
+  &__content {
+    overflow: hidden;
   }
 }
