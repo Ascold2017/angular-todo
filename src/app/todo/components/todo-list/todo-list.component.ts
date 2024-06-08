@@ -9,6 +9,4 @@ import {TodoService} from "../../todo.service";
 export class TodoListComponent {
   constructor(public todoService: TodoService) {
   }
-
-  protected readonly JSON = JSON;
 }
