@@ -1,0 +1,11 @@
+.masonry-container {
+  position: relative;
+  display: block;
+  margin-right: -10px;
+}
+
+.masonry-item {
+  width: calc(33.33% - 10px); /* Adjust this according to your gutter */
+  margin-bottom: 10px; /* Adjust this according to your gutter */
+  display: block;
+}
