@@ -1,4 +1,4 @@
-<app-masonry-grid class="todo-list">
+<app-masonry-grid class="todo-list" [columns]="4">
   <app-todo-item *ngFor="let todo of todoService.todos" [todo]="todo" class="masonry-item">
   </app-todo-item>
 </app-masonry-grid>

@@ -16,7 +16,6 @@ import {
 export class MasonryGridComponent implements AfterViewChecked {
   @Input() columns: number = 3;
   @Input() gutter: number = 10;
-  t: number | null = null;
 
   constructor(private elementRef: ElementRef) { }
 
@@ -32,15 +31,17 @@ export class MasonryGridComponent implements AfterViewChecked {
 
   private rearrangeItems() {
     const element = this.elementRef.nativeElement;
+    const containerWidth = element.offsetWidth;
     const items = element.querySelectorAll('.masonry-item');
     const columnHeights = Array.from({ length: this.columns }, () => 0);
     items.forEach((item: HTMLElement) => {
+      const itemWidth = (containerWidth / this.columns) - (this.gutter * (this.columns - 1));
       const minHeight = Math.min(...columnHeights);
       const columnIndex = columnHeights.indexOf(minHeight);
-      const left = columnIndex * (item.offsetWidth + this.gutter);
+      const left = columnIndex * (itemWidth + this.gutter);
       const top = minHeight;
-      console.log(item.offsetWidth, item.offsetHeight)
 
+      item.style.width =  itemWidth + 'px';
       item.style.position = 'absolute';
       item.style.left = `${left}px`;
       item.style.top = `${top}px`;

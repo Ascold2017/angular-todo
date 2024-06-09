@@ -4,6 +4,6 @@
 }
 
 .masonry-item {
-  width: calc(33.33% - 10px);
+  // width: calc(33.33% - 10px);
   display: block;
 }
