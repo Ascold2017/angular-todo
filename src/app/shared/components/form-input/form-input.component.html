@@ -1,6 +1,8 @@
 
-<figure class="form-input">
-  <label class="form-input__label">{{ label }}</label>
-  <input class="form-input__input" [formControl]="control">
-  <span *ngIf="errors.length" class="form-input__error">{{ errors }}</span>
-</figure>
+<fieldset class="form-input" [ngClass]="{ 'form-input--checkbox': type === 'checkbox'}">
+  <div class="form-input__container">
+    <label class="form-input__label">{{ label }}</label>
+    <input class="form-input__input" [formControl]="control" [type]="type">
+  </div>
+  <span class="form-input__error">{{ errors }}</span>
+</fieldset>

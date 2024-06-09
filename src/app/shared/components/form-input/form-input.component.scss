@@ -1,10 +1,26 @@
 .form-input {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  &__label {}
-  &__input {}
+  &__container {
+    @apply flex flex-col m-0;
+  }
+  &__label {
+    @apply px-1 text-black dark:text-white;
+  }
+  &__input, &__input:focus {
+    flex: 1;
+    @apply px-2 border rounded bg-white dark:bg-black text-black dark:text-white;
+  }
   &__error {
-    color: red;
+    @apply block h-6 text-red-400 dark:text-red-500;
+  }
+
+  &--checkbox {
+    .form-input__container {
+      @apply flex-row;
+    }
+    .form-input__input {
+      flex: 0;
+    }
   }
 }
+
+

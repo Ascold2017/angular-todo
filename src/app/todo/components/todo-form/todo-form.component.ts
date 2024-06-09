@@ -43,6 +43,9 @@ export class TodoFormComponent implements OnInit {
         // @ts-ignore
         : this.todoService.createTodo(this.todoForm.value)
       this.submitEvent.emit()
+      this.todoForm.reset()
+    } else  {
+      this.todoForm.markAllAsTouched();
     }
   }
 

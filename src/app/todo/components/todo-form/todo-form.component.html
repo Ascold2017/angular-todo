@@ -3,6 +3,6 @@
   <app-form-input label="Title" [control]="todoForm.controls.title" />
   <app-form-input label="Content" [control]="todoForm.controls.content"/>
 
-  <button type="submit">{{ initialTodo ? 'Save' : 'Create' }}</button>
-  <button type="reset">Reset</button>
+  <app-button type="submit" class="mr-3">{{ initialTodo ? 'Save' : 'Create' }}</app-button>
+  <app-button type="reset">Reset</app-button>
 </form>

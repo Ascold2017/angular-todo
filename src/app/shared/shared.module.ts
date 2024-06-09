@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import {FormInputComponent} from "./components/form-input/form-input.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import { MasonryGridComponent } from './components/masonry-grid/masonry-grid.component';
-
-
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
     FormInputComponent,
-    MasonryGridComponent
+    MasonryGridComponent,
+    ButtonComponent,
   ],
   imports: [
     CommonModule,
@@ -17,7 +17,8 @@ import { MasonryGridComponent } from './components/masonry-grid/masonry-grid.com
   ],
   exports: [
     FormInputComponent,
-    MasonryGridComponent
+    MasonryGridComponent,
+    ButtonComponent
   ]
 })
 export class SharedModule { }

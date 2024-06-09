@@ -4,8 +4,8 @@
     <header class="todo-item__header">
       <h3>{{ todo.title }}</h3>
       <div class="todo-item__actions">
-        <button (click)="isEdit = true;">Edit</button>
-        <button (click)="todoService.deleteTodo(todo.id)">Delete</button>
+        <app-button (click)="isEdit = true;" class="mr-3">Edit</app-button>
+        <app-button (click)="todoService.deleteTodo(todo.id)">Delete</app-button>
       </div>
     </header>
     <div class="todo-item__content" [innerHtml]="todo.content"></div>

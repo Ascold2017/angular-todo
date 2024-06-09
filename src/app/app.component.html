@@ -1,13 +1,9 @@
 
-<main class="main">
-  <header>
-    <label>
-      <span>Dark theme:</span>
-      <input type="checkbox" [checked]="appService.theme === Theme.DARK" (change)="appService.toggleTheme()">
-    </label>
-
+<main class="main" >
+  <header >
+    <app-form-input type="checkbox" [control]="themeControl" label="Dark mode" />
   </header>
-  <section class="card">
+  <section class="card mb-3">
     <app-todo-form></app-todo-form>
   </section>
   <app-todo-list></app-todo-list>

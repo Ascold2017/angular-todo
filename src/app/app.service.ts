@@ -11,6 +11,6 @@ export class AppService {
   public toggleTheme() {
     this.theme = this.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
 
-    document.querySelector('body')?.classList.toggle('dark')
+    document.querySelector('html')?.classList.toggle('dark')
   }
 }

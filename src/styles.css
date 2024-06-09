@@ -1,13 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
-
-body.dark {
-  background: #000;
-  color: #cccccc;
-}
-
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .card {
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 15px;
+}
+
+body {
+  padding: 1rem;
 }
