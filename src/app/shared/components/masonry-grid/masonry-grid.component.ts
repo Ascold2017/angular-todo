@@ -20,7 +20,6 @@ export class MasonryGridComponent implements AfterViewChecked {
 
   constructor(private elementRef: ElementRef) { }
 
-
   ngAfterViewChecked() {
     this.rearrangeItems()
   }
